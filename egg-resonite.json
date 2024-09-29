@@ -5,15 +5,15 @@
         "update_url": null
     },
     "exported_at": "2024-07-18T14:00:16+00:00",
-    "name": "Resonite Mono",
-    "author": "wattle@wattlefoxxo.com",
-    "description": "Mono egg for resonite.",
+    "name": "Resonite",
+    "author": "wattle@wattlefoxxo.au",
+    "description": "Egg for resonite.",
     "features": null,
     "docker_images": {
-        "Mono": "ghcr.io\/parkervcp\/yolks:mono_latest"
+        "Dotnet 8.0": "ghcr.io\/parkervcp\/yolks:dotnet_8"
     },
     "file_denylist": [],
-    "startup": "mono Headless\/Resonite.exe -HeadlessConfig Config\/Config.json -l .\/Logs $(if {{ENABLE_MODLOADER}}; then echo \"-LoadAssembly \".\/Libraries\/ResoniteModLoader.dll\"\"; fi)",
+    "startup": "dotnet Headless\/Resonite.dll -HeadlessConfig Config\/Config.json -l .\/Logs $(if {{ENABLE_MODLOADER}}; then echo \"-LoadAssembly \".\/Libraries\/ResoniteModLoader.dll\"\"; fi)",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"World running...\"\r\n}",
